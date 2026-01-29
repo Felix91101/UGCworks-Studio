@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>UGCworks Studio – UGC & Werbevideos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg-dark: #0b1120;
+            --bg-light: #f8fafc;
+            --primary: #2563eb;
+            --text-dark: #0f172a;
+            --text-light: #e5e7eb;
+            --border: #e5e7eb;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0b1120, #020617);
+            color: var(--text-light);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 { font-size: 2.8rem; margin-bottom: 10px; }
+        header p { max-width: 720px; margin: auto; font-size: 1.2rem; opacity: 0.9; }
+
+        section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+
+        h2 { font-size: 2rem; margin-bottom: 25px; text-align: center; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid var(--border);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 { margin-top: 0; font-size: 1.3rem; }
+        .price { font-size: 1.8rem; font-weight: bold; margin: 12px 0; color: var(--primary); }
+
+        ul { padding-left: 18px; margin: 0; }
+        li { margin-bottom: 8px; }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 24px;
+            background: var(--primary);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .booking {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 30px;
+            border: 1px solid var(--border);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form { display: grid; gap: 15px; }
+        input, select, textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        textarea { resize: vertical; min-height: 100px; }
+
+        button {
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: var(--primary);
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #020617;
+            color: #94a3b8;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive kleine Bildschirme */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.2rem; }
+            header p { font-size: 1rem; }
+            h2 { font-size: 1.6rem; }
+            .price { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>UGCworks Studio</h1>
+    <p>Wir produzieren authentische User-Generated-Content-Videos und moderne Werbeclips für Unternehmen, Schulen und Organisationen.</p>
+</header>
+
+<section>
+    <h2>Unsere Angebote</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>UGC Starter</h3>
+            <div class="price">ab 299 €</div>
+            <ul>
+                <li>1 authentisches UGC-Video (bis 30 Sek.)</li>
+                <li>Skript & Storyboard</li>
+                <li>Optimiert für Social Media</li>
+            </ul>
+            <a href="https://www.ugcworksstudio.de" target="_blank" class="btn">Jetzt anfragen</a>
+        </div>
+
+        <div class="card">
+            <h3>UGC Growth</h3>
+            <div class="price">ab 749 €</div>
+            <ul>
+                <li>3 UGC-Videos</li>
+                <li>Plattform-Optimierung (TikTok / Instagram)</li>
+                <li>Marketing-Beratung</li>
+            </ul>
+            <a href="https://www.ugcworksstudio.de" target="_blank" class="btn">Jetzt anfragen</a>
+        </div>
+
+        <div class="card">
+            <h3>Image & Education</h3>
+            <div class="price">ab 1.490 €</div>
+            <ul>
+                <li>Image- oder Schulvideo</li>
+                <li>Konzept & Umsetzung</li>
+                <li>Professioneller Schnitt & Branding</li>
+            </ul>
+            <a href="https://www.ugcworksstudio.de" target="_blank" class="btn">Jetzt anfragen</a>
+        </div>
+    </div>
+</section>
+
+<section id="buchung">
+    <h2>Buchungsanfrage</h2>
+    <div class="booking">
+        <form action="https://www.ugcworksstudio.de" method="get" target="_blank">
+            <input type="text" placeholder="Name / Organisation" required>
+            <input type="email" placeholder="E-Mail-Adresse" required>
+            <select required>
+                <option value="">Angebot auswählen</option>
+                <option>UGC Starter</option>
+                <option>UGC Growth</option>
+                <option>Image & Education</option>
+                <option>Individuelles Projekt</option>
+            </select>
+            <textarea placeholder="Kurzbeschreibung Ihres Projekts"></textarea>
+            <button type="submit">Anfrage absenden</button>
+        </form>
+    </div>
+</section>
+
+<section>
+    <h2>Über uns</h2>
+    <p>UGCworks Studio verbindet glaubwürdige Creator-Inhalte mit professioneller Videoproduktion. Unser Ziel sind Videos, die Vertrauen schaffen und messbar wirken – ohne klassisches Werbegefühl.</p>
+</section>
+
+<footer>
+    © 2026 UGCworks Studio · <a href="https://www.ugcworksstudio.de" target="_blank" style="color:inherit; text-decoration:underline;">Website besuchen</a>
+</footer>
+
+</body>
+</html>
